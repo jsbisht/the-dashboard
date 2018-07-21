@@ -27,18 +27,6 @@ section {
 .dashboard .cards {
   display: flex;
 }
-.dashboard .cards .card {
-    background: white;
-    height: 300px;
-    width: 250px;
-    margin-right: 12px;
-    margin-bottom: 12px;
-    box-shadow: 10px 10px 10px 0px #333333;
-}
-
-.dashboard .cards .card:last-child {
-  margin-right: 0px;
-}
 
 .footer {
   background: #4CAF50;

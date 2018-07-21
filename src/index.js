@@ -1,32 +1,17 @@
 import React from 'react';
 import { render } from 'react-dom';
+import { Provider } from 'react-redux';
 
-import './styles/css/styles.css';
+import configureStore from './utility/store/configureStore';
+import App from './components/content-components/application/App';
 
-import Card from './components/common-components/card-component/Card';
+// pass initial state here
+// also initial value is alread set for the configureStore()
+const store = configureStore();
 
 render(
-  <div className="application">
-    <header>
-      <h1 className="site-name">The Dashboard</h1>
-      <h3 className="greetings">
-        <span className="greet-user">Welcome Jagdeep. </span>
-        <span className="daily-motivation">Today is gonna be awesome.</span>
-      </h3>
-    </header>
-    <section className="dashboard">
-      <h2 className="cards-title">Your Cards</h2>
-      <div className="cards">
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-      </div>
-    </section>
-    <footer className="footer">
-      <h2 className="copyright">Bhai mast dashboard banaye ho !!!</h2>
-      <h3 className="copyright">&copy; 2018</h3>
-    </footer>
-  </div>,
+  <Provider store={store}>
+    <App />
+  </Provider>,
   document.getElementById('app')
 );

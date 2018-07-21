@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 import "./Input.scss";
 
@@ -7,7 +7,7 @@ class Input extends React.Component {
         return (
           <div className="input-field">
             <label htmlFor=""></label>
-            <input type="text" placeholder="" />
+            <input type="text" value={this.props.value} onChange={this.props.titleChange}/>
           </div>
         );
     }
