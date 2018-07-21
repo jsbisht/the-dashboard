@@ -1,0 +1,37 @@
+body {
+  margin: 0;
+}
+
+header {
+  padding: 12px;
+  background: #66BB6A;
+}
+section {
+  height: 500px;
+  background: grey;
+}
+footer {
+  height: 100px;
+  background: #4CAF50;
+}
+
+.greetings {
+  color: white;
+}
+
+.greetings .daily-motivation {
+  font-size: 1em;
+  font-style: italic;
+}
+
+.dashboard {
+  padding: 12px;
+  overflow: auto;
+}
+
+.dashboard .card {
+    background: white;
+    height: 300px;
+    width: 250px;
+    box-shadow: 10px 10px 10px 0px #333333;
+}

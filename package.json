@@ -8,8 +8,7 @@
     "lint": "node_modules/.bin/esw webpack.config.* src tools",
     "lint:watch": "npm run lint -- --watch"
   },
-  "author": "Cory House",
-  "license": "MIT",
+  "author": "Jagdeep Singh Bisht",
   "dependencies": {
     "babel-polyfill": "6.8.0",
     "bootstrap": "3.3.6",
@@ -64,6 +63,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/coryhouse/pluralsight-redux-starter"
+    "url": "https://github.com/jsbisht/the-dashboard"
   }
 }
