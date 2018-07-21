@@ -10,10 +10,6 @@ section {
   height: 500px;
   background: grey;
 }
-footer {
-  height: 100px;
-  background: #4CAF50;
-}
 
 .greetings {
   color: white;
@@ -34,4 +30,10 @@ footer {
     height: 300px;
     width: 250px;
     box-shadow: 10px 10px 10px 0px #333333;
+}
+
+.footer {
+  background: #4CAF50;
+  overflow: auto;
+  padding: 12px;
 }
