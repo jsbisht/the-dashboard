@@ -1,5 +1,5 @@
-import React, { PropTypes } from 'react';
-import {connect} from 'react-redux';
+import React, { PropTypes } from "react";
+import { connect } from "react-redux";
 
 import Input from "../input-component/Input";
 import * as CardActions from "../../../utility/actions/Card.Action";
@@ -10,10 +10,6 @@ class Card extends React.Component {
   constructor(props, context) {
     super(props, context);
 
-    this.state = {
-      card: { title: "Title Hai" }
-    };
-
     this.onClickSave = this.onClickSave.bind(this);
     this.onTitleChange = this.onTitleChange.bind(this);
   }
@@ -21,7 +17,7 @@ class Card extends React.Component {
   onTitleChange(event) {
     const card = this.state.card;
     card.title = event.target.value;
-    this.setState({card: card});
+    this.setState({ card: card });
   }
 
   onClickSave(event) {
@@ -31,9 +27,10 @@ class Card extends React.Component {
   render() {
     return (
       <div className="card">
-        {JSON.stringify(this.props.cards)}
-        <Input value={this.state.card.title} titleChange={this.onTitleChange}/>
-        <button type="submit" onClick={this.onClickSave}>Save</button>
+        <Input value={this.props.card.title} titleChange={this.onTitleChange} />
+        <button type="submit" onClick={this.onClickSave}>
+          Save
+        </button>
       </div>
     );
   }
@@ -47,7 +44,7 @@ function mapStateToProps(state, ownProps) {
 
 Card.propTypes = {
   dispatch: PropTypes.func.isRequired,
-  cards: PropTypes.array.isRequired
+  card: PropTypes.object.isRequired
 };
 
 export default connect(mapStateToProps)(Card);
