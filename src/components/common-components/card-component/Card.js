@@ -9,28 +9,21 @@ import "./Card.scss";
 class Card extends React.Component {
   constructor(props, context) {
     super(props, context);
-
-    this.onClickSave = this.onClickSave.bind(this);
-    this.onTitleChange = this.onTitleChange.bind(this);
   }
 
-  onTitleChange(event) {
-    const card = this.state.card;
-    card.title = event.target.value;
-    this.setState({ card: card });
-  }
-
-  onClickSave(event) {
-    this.props.dispatch(CardActions.createCard(this.state.card));
+  onEnter(event) {
+    //this.props.dispatch(CardActions.createCard(card));
   }
 
   render() {
     return (
       <div className="card">
-        <Input value={this.props.card.title} titleChange={this.onTitleChange} />
-        <button type="submit" onClick={this.onClickSave}>
-          Save
-        </button>
+        {this.props.card.items.map((item, index) => (
+          <div key={index}>
+            <input defaultValue={item} onKeyUp={this.onEnter} />
+            <span>{item}</span>
+          </div>
+        ))}
       </div>
     );
   }
@@ -48,4 +41,3 @@ Card.propTypes = {
 };
 
 export default connect(mapStateToProps)(Card);
-//export default Card;

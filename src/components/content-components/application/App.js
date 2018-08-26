@@ -18,7 +18,11 @@ class App extends React.Component {
   }
   addCard() {
     const cards = [...this.state.cards];
-    cards.push({ title: "Title Hai" });
+    const card = {
+      title: "Kuch toh log kahenge",
+      items: [{ title: "Title Hai" }]
+    };
+    cards.push(card);
     this.setState({ cards });
   }
   render() {
@@ -41,7 +45,9 @@ class App extends React.Component {
             </div>
           </div>
           <div className="cards">
-            {this.state.cards.map(card => <Card card={card} />)}
+            {this.state.cards.map((card, index) => (
+              <Card key={index} card={card} />
+            ))}
           </div>
         </section>
         <footer className="footer">
