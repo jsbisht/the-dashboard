@@ -17,6 +17,13 @@ I would like to manage:
 
 There are too many distractions in life, that makes us forget the things that matter us more. (HOW DO YOU SPECIFY WHICH ACTIVITY MATTERS TO YOU MORE)
 
+## Focus Area
+
+1. Overview of my life
+2. Actions that i need to take
+3. Time Management
+4. Daily motivation
+
 # Existing Solutions
 
 ## Google Calendar
