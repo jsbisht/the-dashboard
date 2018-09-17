@@ -1,0 +1,16 @@
+.bubbles-container {
+  border: 1px solid aquamarine;
+  .bubbles-in-air {
+    border-bottom: 1px dashed #cccccc;
+  }
+  .bubbles-in-air, .bubbles-on-ground {
+    padding: 12px;
+    min-height: 100px;
+  }
+  .bubble {
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+    background: red;
+  }
+}

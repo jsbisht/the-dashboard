@@ -1,9 +1,9 @@
-import React from 'react';
-import { render } from 'react-dom';
-import { Provider } from 'react-redux';
+import React from "react";
+import { render } from "react-dom";
+import { Provider } from "react-redux";
 
-import configureStore from './utility/store/configureStore';
-import App from './components/content-components/application/App';
+import configureStore from "./utility/store/configureStore";
+import TestPad from "./components/content-components/testpad/TestPad";
 
 // pass initial state here
 // also initial value is alread set for the configureStore()
@@ -11,7 +11,7 @@ const store = configureStore();
 
 render(
   <Provider store={store}>
-    <App />
+    <TestPad />
   </Provider>,
-  document.getElementById('app')
+  document.getElementById("app")
 );
