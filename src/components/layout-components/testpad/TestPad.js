@@ -1,6 +1,6 @@
 import React from "react";
 
-import Bubble from "../../module-components/bubbles-components/Bubbles";
+import Bubbles from "../../module-components/bubbles-component/Bubbles";
 
 import "./TestPad.scss";
 
@@ -13,7 +13,7 @@ class TestPad extends React.Component {
     return (
       <div className="application">
         <section className="testpad">
-          <Bubble />
+          <Bubbles />
         </section>
       </div>
     );

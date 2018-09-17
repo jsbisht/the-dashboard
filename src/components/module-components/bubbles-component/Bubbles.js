@@ -1,5 +1,7 @@
 import React from "react";
 
+import Bubble from "./Bubble";
+
 import "./Bubbles.scss";
 
 class Bubbles extends React.Component {
@@ -11,10 +13,10 @@ class Bubbles extends React.Component {
     return (
       <div className="bubbles-container">
         <div className="bubbles-in-air">
-          <div className="bubble" />
+          <Bubble />
         </div>
         <div className="bubbles-on-ground">
-          <div className="bubble" />
+          <Bubble />
         </div>
       </div>
     );
