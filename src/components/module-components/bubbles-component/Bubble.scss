@@ -1,0 +1,27 @@
+.bubble-container {
+  .bubble {
+    border-radius: 50px;
+    height: 100px;
+    width: 100px;
+  }
+  .bubble-options {
+    display: none;
+  }
+  .bubble-options.visible {
+    display: block;
+    width: 100px;
+    position: absolute;
+    z-index: 100;
+    .option {
+      display: inline-block;
+      width: 50%;
+      &.done {
+        text-align: left;
+      }
+
+      &.drop {
+        text-align: right;
+      }
+    }
+  }
+}
