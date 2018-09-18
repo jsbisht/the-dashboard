@@ -1,5 +1,5 @@
 import React from "react";
-//import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import BubbleOptions from "./BubbleOptions";
 
 import "./Bubble.scss";
 
@@ -15,32 +15,23 @@ class Bubble extends React.Component {
     super(props, context);
 
     this.state = {
-      visible: false
+      visible: true
     };
   }
 
   toggleBubbleOptions = () => {
-    this.setState({ visible: !this.state.visible });
+    //this.setState({ visible: !this.state.visible });
   };
 
   render() {
     return (
-      <div className="bubble-container">
-        <div
-          className={"bubble-options" + (this.state.visible ? " visible" : "")}
-        >
-          <div className="option done">
-            <FontAwesomeIcon icon="check" />
-          </div>
-          <div className="option drop">
-            <FontAwesomeIcon icon="arrow-down" />
-          </div>
-        </div>
-        <div
-          className="bubble"
-          onMouseEnter={this.toggleBubbleOptions}
-          onMouseLeave={this.toggleBubbleOptions}
-        />
+      <div
+        className="bubble-container"
+        onMouseEnter={this.toggleBubbleOptions}
+        onMouseLeave={this.toggleBubbleOptions}
+      >
+        <BubbleOptions />
+        <div className="bubble" />
       </div>
     );
   }

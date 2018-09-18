@@ -1,8 +1,12 @@
 .bubble-container {
+  display: inline-block;
+  margin: 6px;
+  
   .bubble {
     border-radius: 50px;
     height: 100px;
     width: 100px;
+    margin: 5px;
   }
   .bubble-options {
     display: none;
