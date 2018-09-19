@@ -13,40 +13,17 @@ library.add(faArrowDown);
 class BubbleOptions extends React.Component {
   constructor(props, context) {
     super(props, context);
-
-    this.state = {
-      visible: true
-    };
   }
-
-  toggleBubbleOptions = () => {
-    //this.setState({ visible: !this.state.visible });
-  };
 
   render() {
     return (
-      <ul className="circle-container">
+      <ul
+        className={"circle-container" + (this.props.visible ? " visible" : "")}
+      >
         <li>
           <FontAwesomeIcon icon="check" />
         </li>
-        <li>
-          <FontAwesomeIcon icon="check" />
-        </li>
-        <li>
-          <FontAwesomeIcon icon="check" />
-        </li>
-        <li>
-          <FontAwesomeIcon icon="check" />
-        </li>
-        <li>
-          <FontAwesomeIcon icon="check" />
-        </li>
-        <li>
-          <FontAwesomeIcon icon="check" />
-        </li>
-        <li>
-          <FontAwesomeIcon icon="check" />
-        </li>
+        <li />
         <li>
           <FontAwesomeIcon icon="check" />
         </li>

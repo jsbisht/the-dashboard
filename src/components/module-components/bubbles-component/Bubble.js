@@ -3,24 +3,17 @@ import BubbleOptions from "./BubbleOptions";
 
 import "./Bubble.scss";
 
-import { library } from "@fortawesome/fontawesome-svg-core";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCheck, faArrowDown } from "@fortawesome/free-solid-svg-icons";
-
-library.add(faCheck);
-library.add(faArrowDown);
-
 class Bubble extends React.Component {
   constructor(props, context) {
     super(props, context);
 
     this.state = {
-      visible: true
+      visible: false
     };
   }
 
   toggleBubbleOptions = () => {
-    //this.setState({ visible: !this.state.visible });
+    this.setState({ visible: !this.state.visible });
   };
 
   render() {
@@ -30,7 +23,9 @@ class Bubble extends React.Component {
         onMouseEnter={this.toggleBubbleOptions}
         onMouseLeave={this.toggleBubbleOptions}
       >
-        <BubbleOptions />
+        {this.state.visible ? (
+          <BubbleOptions visible={this.state.visible} />
+        ) : null}
         <div className="bubble" />
       </div>
     );
